@@ -1,0 +1,118 @@
+.container {
+    max-width: 100% !important;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.3fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar search search search"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+    /* grid-gap: 0.2rem; */
+    background-color: hsl(97deg 13% 80%);
+    padding: 0% !important;
+}
+
+.nav {
+    background-color: hsl(203deg 20% 23%);
+    grid-area: nav;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa-brands {
+    margin: 0%;
+}
+
+.github {
+    font-size: 24px;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input {
+    background-color: hsl(0deg 0% 21%);
+    grid-area: search;
+    border-radius: 1rem;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    margin-left: 7.5rem !important;
+    margin-right: 7.5rem !important;
+}
+
+input::placeholder {
+
+    font-weight: bold;
+    color: gray;
+}
+
+#sidebar {
+    background-color: hsl(0deg 0% 21%);
+    grid-area: sidebar;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+#content1 {
+    background-color: hsl(0deg 0% 21%);
+    grid-area: content1;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+#content2 {
+    background-color: hsl(0deg 0% 21%);
+    grid-area: content2;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+#content3 {
+    background-color: hsl(0deg 0% 21%);
+    grid-area: content3;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+footer {
+    background-color: hsl(0deg 0% 21%);
+    grid-area: footer;
+    border-radius: 1rem;
+    margin: 2rem;
+}
+
+@media only screen and (max-width: 830px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 1.5fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "search"
+        "sidebar"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "search"
+        "sidebar"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
